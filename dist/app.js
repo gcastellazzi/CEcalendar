@@ -96,8 +96,10 @@
 
   async function loadEvents() {
     setStatus('loading');
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 12000);
     try {
-      const response = await fetch(`${SOURCE_URL}?cecalendar=${Date.now()}`, {cache:'no-store'});
+      const response = await fetch(`${SOURCE_URL}?cecalendar=${Date.now()}`, {cache:'no-store',signal:controller.signal});
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const events = parseExamPage(await response.text());
       if (!events.length) throw new Error('No exam dates found');
@@ -113,6 +115,8 @@
     } catch (error) {
       console.error('CE Calendar:', error);
       setStatus('error');
+    } finally {
+      window.clearTimeout(timeout);
     }
   }
 

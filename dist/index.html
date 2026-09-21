@@ -59,13 +59,13 @@
         <label><span data-i18n="courseFilter">Corso</span><select id="courseFilter"><option value="">Tutti i corsi</option></select></label>
         <label><span data-i18n="teacherFilter">Docente</span><select id="teacherFilter"><option value="">Tutti i docenti</option></select></label>
         <button id="clearFiltersButton" class="clear-filter" type="button" data-i18n="clearFilters">Azzera filtri</button>
+        <div id="statusMessage" class="status-panel loading" role="status" aria-live="polite">
+          <span class="spinner" aria-hidden="true"></span>
+          <div><strong data-i18n="loadingTitle">Caricamento degli appelli</strong><span data-i18n="loadingBody">Lettura della pagina ufficiale Unibo…</span></div>
+        </div>
         <p class="duration-note"><span aria-hidden="true">◷</span> <span data-i18n="durationNote">Durata indicativa: 3 ore</span></p>
       </div>
 
-      <div id="statusMessage" class="status-panel loading" role="status" aria-live="polite">
-        <span class="spinner" aria-hidden="true"></span>
-        <div><strong data-i18n="loadingTitle">Caricamento degli appelli</strong><span data-i18n="loadingBody">Lettura della pagina ufficiale Unibo…</span></div>
-      </div>
       <div id="calendarContainer" class="calendar-shell" hidden></div>
     </section>
 
