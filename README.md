@@ -2,6 +2,8 @@
 
 Calendario bilingue e di sola lettura per gli appelli del corso di laurea magistrale in Civil Engineering dell'Università di Bologna.
 
+Il calendario è pubblicato su [gcastellazzi.github.io/CEcalendar](https://gcastellazzi.github.io/CEcalendar/).
+
 Il sito legge i dati aggiornati dalla [pagina ufficiale degli appelli](https://corsi.unibo.it/2cycle/CivilEngineering/exam-dates) quando viene aperto o quando si preme **Aggiorna**. Gli intervalli mostrati hanno una durata indicativa di tre ore e servono esclusivamente a rendere visibili le sovrapposizioni.
 
 ## Funzioni
